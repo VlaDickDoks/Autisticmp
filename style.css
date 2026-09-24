@@ -1,0 +1,147 @@
+:root{
+  --bg:#08060c;
+  --panel:#120c1c;
+  --panel2:#1a1028;
+  --accent:#7c3aed;
+  --accent2:#a855f7;
+  --accent3:#c084fc;
+  --text:#ece4f8;
+  --muted:#9a8fb0;
+  --green:#4caf50;
+  --red:#e05252;
+  --yellow:#e0b84c;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
+  font-family:'Segoe UI',Roboto,-apple-system,sans-serif;line-height:1.5}
+a{color:var(--accent3);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header{
+  padding:48px 20px 32px;
+  text-align:center;
+  background:linear-gradient(180deg,#1e0f38 0%,#08060c 100%);
+  border-bottom:1px solid #2a1a45;
+}
+header h1{
+  margin:0 0 8px;
+  font-size:clamp(20px,4vw,34px);
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#a855f7,#e9d5ff,#a855f7);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+header .sub{color:var(--muted);font-size:14px}
+header .authors{margin-top:14px;font-size:13px;color:var(--muted)}
+header .authors b{color:var(--text)}
+
+.warn{
+  max-width:900px;margin:22px auto 0;padding:14px 18px;
+  background:#1c0f33;border:1px solid #4c2a8a;border-radius:10px;
+  font-size:14px;text-align:left;
+}
+.warn b{color:#d8b4fe}
+.warn + .warn{margin-top:12px}
+
+main{max-width:1100px;margin:0 auto;padding:32px 20px 80px}
+
+.tabs{
+  display:flex;flex-wrap:wrap;gap:8px;
+  margin-bottom:24px;position:sticky;top:0;
+  background:var(--bg);padding:12px 0;z-index:10;
+  border-bottom:1px solid #221636;
+}
+.tab{
+  padding:8px 14px;border-radius:8px;cursor:pointer;
+  background:var(--panel);border:1px solid #2a1a45;
+  color:var(--muted);font-size:13px;transition:.15s;user-select:none;
+}
+.tab:hover{background:var(--panel2);color:var(--text)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent2)}
+
+.search{
+  width:100%;padding:12px 16px;margin-bottom:24px;
+  background:var(--panel);border:1px solid #2a1a45;border-radius:10px;
+  color:var(--text);font-size:15px;outline:none;
+}
+.search:focus{border-color:var(--accent2)}
+
+section{margin-bottom:40px}
+section h2{
+  font-size:18px;margin:0 0 14px;padding-bottom:8px;
+  border-bottom:1px solid #221636;color:#d8b4fe;
+  letter-spacing:.5px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:12px;
+}
+.card{
+  background:var(--panel);border:1px solid #221636;border-radius:10px;
+  padding:14px 16px;transition:.15s;
+}
+.card:hover{background:var(--panel2);border-color:var(--accent)}
+.card .name{
+  font-weight:600;font-size:14px;color:#e9d5ff;margin-bottom:6px;
+  display:flex;justify-content:space-between;align-items:flex-start;gap:8px;
+}
+.card .desc{font-size:13px;color:var(--muted)}
+.card .desc .tag{
+  display:inline-block;font-size:11px;padding:1px 6px;border-radius:4px;
+  background:#221636;color:var(--accent3);margin-left:4px;
+  vertical-align:middle;
+}
+.badge{
+  font-size:10px;padding:2px 7px;border-radius:10px;
+  white-space:nowrap;font-weight:600;letter-spacing:.5px;
+  text-transform:uppercase;
+}
+.b-add{background:#1c2a3d;color:#7cc4e0}
+.b-rem{background:#3d1515;color:#ff9a9a}
+.b-rep{background:#3d3315;color:#ffd97c}
+
+.hidden{display:none !important}
+
+/* ===== Анимации при прокрутке ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .6s cubic-bezier(.22,.61,.36,1),
+             transform .6s cubic-bezier(.22,.61,.36,1);
+  will-change:opacity, transform;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+/* карточки чуть заметнее двигаются и с лёгким масштабом */
+.card.reveal{
+  transform:translateY(28px) scale(.98);
+}
+.card.reveal.is-visible{
+  transform:translateY(0) scale(1);
+}
+/* заголовки секций */
+section h2.reveal{
+  transform:translateY(14px);
+}
+section h2.reveal.is-visible{
+  transform:translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+}
+
+footer{
+  text-align:center;padding:40px 20px;color:var(--muted);font-size:13px;
+  border-top:1px solid #221636;line-height:1.9;
+}
+footer .copy{
+  font-size:14px;color:#c084fc;font-weight:600;letter-spacing:.5px;
+}
+footer .copy span{color:#e9d5ff}
+footer .fineprint{
+  margin-top:10px;font-size:11px;color:#5a4d75;
+}
