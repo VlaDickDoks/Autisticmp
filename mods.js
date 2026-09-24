@@ -7,7 +7,7 @@ const MODS_DATA = [
   // ================== ДОБАВЛЕННЫЕ ==================
   {
     cat: 'add',
-    title: 'Усложнение / Баланс',
+    title: 'Добавленые: Усложнение / Баланс',
     items: [
       { name: 'Simple Radio', badge: 'add', desc: 'Теперь можно общаться на расстоянии.' },
       { name: 'No Chat', badge: 'add', desc: 'Чат был заменён на общение по радио.' },
@@ -29,7 +29,7 @@ const MODS_DATA = [
   },
   {
     cat: 'add',
-    title: 'Оптимизация / Визуал / Удобство',
+    title: 'Добавленые: Оптимизация / Визуал / Удобство',
     items: [
       { name: '(Sodium) Chloride', badge: 'add', desc: 'Много полезных функций и оптимизации: приближение, чёрные ночи и т.п.', tags: ['замена ZoomIn', 'замена True Darkness'] },
       { name: 'Shulker Box Tooltip', badge: 'add', desc: 'Просмотр шалкера прямо в инвентаре!' },
@@ -55,7 +55,7 @@ const MODS_DATA = [
   },
   {
     cat: 'add',
-    title: 'Содержание / Генерация',
+    title: 'Добавленые: Содержание / Генерация',
     items: [
       { name: 'Abandoned Cabins', badge: 'add', desc: 'Меньше общества.' },
       { name: 'Abandoned Watchtowers', badge: 'add', desc: 'Меньше общества, ощущение будто вы одни в мире: нет ничего кроме природы и твоих друзей (врагов хз).' },
@@ -72,7 +72,7 @@ const MODS_DATA = [
   // ================== УБРАННЫЕ ==================
   {
     cat: 'rem',
-    title: 'Убранные — Жалоба / Читерно',
+    title: 'Убранные: Жалоба / Читерно',
     items: [
       { name: 'Born in Chaos', badge: 'rem', desc: 'Теперь баланс в пользу хардкора пофикшен.' },
       { name: 'Better Сlimbing', badge: 'rem', desc: 'Позволял очень быстро лазать по лестнице, нахуй упрощение! XD' },
@@ -84,7 +84,7 @@ const MODS_DATA = [
   },
   {
     cat: 'rem',
-    title: 'Убранные — Ненадобность / Не красиво',
+    title: 'Убранные: Ненадобность / Не красиво',
     items: [
       { name: 'Better Clouds', badge: 'rem', desc: 'Некрасивые облачка.' },
       { name: 'Blur Forge (Unofficial)', badge: 'rem', desc: 'Багается с Fancy Menu — хотите ставьте, хотите нет.' },
@@ -93,7 +93,7 @@ const MODS_DATA = [
   },
   {
     cat: 'rem',
-    title: 'Убранные — Тематика / Не нравится',
+    title: 'Убранные: Тематика / Не нравится',
     items: [
       { name: 'Create & Add-ons', badge: 'rem', desc: 'Не вписывается в тематику сборки, прости уж Симен.' },
       { name: 'Dark Doppelganger', badge: 'rem', desc: 'Гавно.' },
@@ -102,7 +102,7 @@ const MODS_DATA = [
   },
   {
     cat: 'rem',
-    title: 'Убранные — Заменён / Улучшен',
+    title: 'Убранные: Заменён / Улучшен',
     items: [
       { name: 'CustomSkinLoader', badge: 'rep', desc: 'Заменён и улучшен.' },
       { name: 'DnT: stronghold reworked', badge: 'rep', desc: 'Заменён и улучшен.' },
