@@ -184,6 +184,287 @@
       </p>
 
       <div class="materials-grid">
+
+        <div class="material-card" style="border-style: dashed; border-color: #3a2a5a; opacity: .7;">
+          <h3 style="color: #9a8fb0;">Сборка вышла 🥳</h3>
+          <div class="meta">Ссылка на сборку всли чето не работает поплачьте</div>
+          <div style="padding: 30px 0; text-align: center; color: #5a4d75; font-size: 14px;">
+            https://drive.google.com/file/d/1LFHgKzivM5oU1lt1dGC_brbEp4hQlycW/view?usp=sharing
+          </div>
+        </div>
+
+        <!-- НОВЫЙ МАТЕРИАЛ: Autistic Squad MP Trailer 20267 -->
+        <div class="material-card">
+          <h3>Autistic Squad MP Trailer 20267</h3>
+          <div class="meta">официальный трейлер · 20267</div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/yMHPFqbJUro"
+              title="Autistic Squad MP Trailer 20267"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="note">
+            <b>💡 Примечание:</b> трейлер, который мы заслужили.
+          </div>
+        </div>
+
+        <!-- Место для других материалов -->
+        <div class="material-card">
+          <h3>67</h3>
+          <div class="meta">67</div>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/o6ybBfgf_L4"
+              title="OFFICIAL GAY SHUCKS LYRICS CUTSCENE (+FLA)"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="note">
+            <b>💡 Примечание:</b> я кончил.
+          </div>
+        </div>
+
+      </div> <!-- ← materials-grid закрыт здесь, все карточки внутри -->
+
+      <button class="back-link" onclick="switchPage('mods')">← Вернуться к модам</button>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="copy">
+    © 2026 <span>Autistic Squirt ModPack</span> все права потерялись блин сука как так.
+  </div>
+  <div class="copy" style="margin-top:6px;font-weight:400;font-size:13px;color:#9a8fb0">
+    Сборка собрана <s>на коленке</s> с любовью. Моды принадлежат их авторам,
+    а пиписьки мне. Геймплей не гарантирован, но вайб прилагается.
+  </div>
+  <div class="fineprint">
+    Любое совпадение с реальными модпаками случайно. Если что-то сломалось это фича.
+    Играйте на свой страх и риск, мы предупредили про папки.
+  </div>
+</footer>
+
+<script src="mods.js"></script>
+<script src="script.js"></script>
+
+<!-- Скрипт переключения страниц -->
+<script>
+(function() {
+  window.switchPage = function(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const target = document.getElementById('page-' + pageId);
+    if (target) target.classList.add('active');
+
+    document.querySelectorAll('.main-nav .nav-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.page === pageId);
+    });
+
+    if (window.reinitReveal) window.reinitReveal();
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  document.querySelectorAll('.main-nav .nav-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      switchPage(this.dataset.page);
+    });
+  });
+})();
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autistic Squirt ModPack 1.4.3 Big Cock is OUT!</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Дополнительные стили для навигации и страницы материалов */
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--bg);
+    border-bottom: 1px solid #2a1a45;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .main-nav .nav-btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    background: var(--panel);
+    border: 1px solid #2a1a45;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    user-select: none;
+    letter-spacing: .3px;
+  }
+  .main-nav .nav-btn:hover {
+    background: var(--panel2);
+    color: var(--text);
+    border-color: var(--accent2);
+  }
+  .main-nav .nav-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent2);
+    box-shadow: 0 0 18px rgba(124, 58, 237, 0.4);
+  }
+
+  /* Страницы */
+  .page {
+    display: none;
+    animation: fadePage .3s ease;
+  }
+  .page.active {
+    display: block;
+  }
+  @keyframes fadePage {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Страница материалов */
+  .materials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 12px;
+  }
+  .material-card {
+    background: var(--panel);
+    border: 1px solid #221636;
+    border-radius: 14px;
+    padding: 22px 24px;
+    transition: .2s;
+  }
+  .material-card:hover {
+    border-color: var(--accent);
+    background: var(--panel2);
+  }
+  .material-card h3 {
+    margin: 0 0 6px;
+    color: #d8b4fe;
+    font-size: 17px;
+    letter-spacing: .4px;
+  }
+  .material-card .meta {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0a0712;
+    border: 1px solid #2a1a45;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .note {
+    margin-top: 14px;
+    font-size: 13px;
+    color: var(--muted);
+    padding: 12px 16px;
+    background: #0f0a1a;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+  }
+  .note b { color: #d8b4fe; }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-size: 13px;
+    color: var(--accent3);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .back-link:hover { color: #e9d5ff; }
+
+  @media (max-width: 600px) {
+    .main-nav .nav-btn { padding: 8px 16px; font-size: 12px; }
+    .material-card { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- НАВИГАЦИЯ СВЕРХУ -->
+<nav class="main-nav" id="mainNav">
+  <div class="nav-btn active" data-page="mods">📦 Моды</div>
+  <div class="nav-btn" data-page="materials">🎬 Материалы</div>
+</nav>
+
+<header>
+  <h1>𝖠𝗎𝗍𝗂𝗌𝗍𝗂𝖼 𝖲𝗊𝗎𝗂𝗋𝗍 𝖬𝗈𝖽𝖯𝖺𝖼𝗄 𝟣.𝟦.𝟥<br>𝖡𝗂𝗀 𝖢𝗈𝖼𝗄 𝗂𝗌 𝖮𝖴𝖳 !</h1>
+  <div class="sub">это можно называть реборном?</div>
+  <div class="authors">by <b>maybesomeoneinfuture</b>, <b>vampzz5021</b></div>
+
+  <div class="warn">
+    Трогать разрешаю только клиентские моды, чтобы поменять или убрать визуал, а то вы же не хотите, чтобы нельзя было зайти на сервак и поиграть.
+    <b>С любовью, идите нахуй.</b>
+  </div>
+
+  <div class="warn">
+    ⚠️ <b>ПРОШУ, УДАЛИТЕ ВСЕ ПАПКИ В ПРЕД. СБОРКЕ, А ПОТОМ ЗАКИНЬТЕ ФАЙЛЫ, КОТОРЫЕ Я СКИНУЛ ВАМ В АРХИВЕ ⚠️
+    <br><br>
+    ⚠️ <b>НЕ ТРОГАЙТЕ GUI SCALE В ГРАФИКЕ, СЛОМАЕТЕ МЕНЮШКУ!!67!!</b> ⚠️
+  </div>
+</header>
+
+<main>
+  <!-- ===== СТРАНИЦА: МОДЫ ===== -->
+  <div class="page active" id="page-mods">
+    <div class="tabs" id="tabs">
+      <div class="tab active" data-filter="all">Все</div>
+      <div class="tab" data-filter="add">Добавленные</div>
+      <div class="tab" data-filter="rem">Убранные</div>
+    </div>
+
+    <input class="search" id="search" type="text" placeholder="Поиск по названию мода...">
+
+    <div id="mods-container"></div>
+  </div>
+
+  <!-- ===== СТРАНИЦА: МАТЕРИАЛЫ ===== -->
+  <div class="page" id="page-materials">
+    <section style="margin-bottom: 40px;">
+      <h2>🎬 Misery-материалы</h2>
+      <p style="color: var(--muted); font-size: 14px; margin: -6px 0 18px;">
+        Максимально не официальные видео total bullshit.
+      </p>
+
+      <div class="materials-grid">
         <div class="material-card" style="border-style: dashed; border-color: #3a2a5a; opacity: .7;">
           <h3 style="color: #9a8fb0;">Сборка вышла 🥳</h3> <!-- свободный слот-->
           <div class="meta">Ссылка на сборку всли чето не работает поплачьте</div> <!-- свободное место под матерьял-->
