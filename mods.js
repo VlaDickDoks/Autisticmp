@@ -80,7 +80,7 @@ const MODS_DATA = [
       { name: "MNS — Moog's Nether Structures", badge: 'rem', desc: 'Слишком мало полезных, да хотя бы красивых структур.' },
       { name: "MVS — Moog's Voyager Structures", badge: 'rem', desc: 'Я НЕ БУДУ СМОТРЕТЬ 130+ СТРУКТУР РАДИ 10 БОЛЕЕ МЕНЕЕ! T-T' },
       { name: 'ModernFix', badge: 'rem', desc: 'Багается пиздец часто, сборка запускается не так уж и долго (10 минут).' },
-      {name: 'Peak Stamina', badge: 'rem', desc: 'была убрана из-за несовместимости с модами, плачем и какаем надо этим T-T.'}
+      {name: 'Peak Stamina', badge: 'rem', desc: 'была убрана из-за несовместимости с модами, плачем и какаем надо этим T-T.' }
     ]
   },
   {
